@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class even {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter limit:");
+        int N = scanner.nextInt();
+        int sum = 0;
+        for (int i = 1; i <= N; i++) {
+            sum += i;
+        }
+        System.out.println("Sum of N natural numbers: " + sum);
+        int evenSum = 0;
+        System.out.println("Even numbers within the limit:");
+        for (int i = 2; i <= N; i += 2) {
+            System.out.print(i + " ");
+            evenSum += i;
+        }
+        System.out.println("\nSum of even numbers: " + evenSum);
+        scanner.close();
+    }
+}
