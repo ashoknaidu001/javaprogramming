@@ -1,0 +1,28 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        // Create the first hash map (super1)
+        Map<String, String> super1 = new HashMap<>();
+        super1.put("Apple", "Red");
+        super1.put("Banana", "Yellow");
+        super1.put("Cherry", "Red");
+
+        // Create the second hash map (super2)
+        Map<String, String> super2 = new HashMap<>();
+        super2.put("Blueberry", "Blue");
+        super2.put("Banana", "Yellow");
+        super2.put("Grapes", "Purple");
+
+        // Remove keys starting with "B" from super1
+        super1.keySet().removeIf(key -> key.startsWith("B"));
+
+        // Remove keys starting with "B" from super2
+        super2.keySet().removeIf(key -> key.startsWith("B"));
+
+        // Print the updated hash maps
+        System.out.println("super1 after removing keys starting with 'B': " + super1);
+        System.out.println("super2 after removing keys starting with 'B': " + super2);
+    }
+}
